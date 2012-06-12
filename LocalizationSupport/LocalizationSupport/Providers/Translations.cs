@@ -7,30 +7,11 @@ using System.Globalization;
 using System.Collections;
 using System.Resources;
 using System.Data;
-using ChangeLanguage.Properties;
+using LocalizationSupport.Properties;
 
-namespace ChangeLanguage.ViewModel
+
+namespace LocalizationSupport.Providers
 {
-    /*
-     * Helper class
-     */ 
-    class Translations
-    {
-        private static Settings settings = Settings.Default;
-
-        //connection string
-        private static DatabaseResourceManager databaseResourceManager = new DatabaseResourceManager(settings.translationsConnectionString);        
-
-        public static string GetString(string identifier)
-        {
-            return databaseResourceManager.GetString(identifier, settings.currentCulture);
-        }
-
-        public static List<CultureInfo> GetCultureList()
-        {
-            return databaseResourceManager.CultureList;
-        }
-    }
 
     public class DatabaseResourceManager : ResourceManager
     {
@@ -39,12 +20,12 @@ namespace ChangeLanguage.ViewModel
 
         public List<CultureInfo> CultureList { get; private set; }
 
-        public DatabaseResourceManager(string dsn)
+        public DatabaseResourceManager(string connectionString)
         {
-            this.dsn = dsn;
+            this.dsn = connectionString;
             this.resources = new Hashtable();
-            this.CultureList = GetLanguageList();
-        }
+            this.CultureList = GetLanguageList(); 
+        }               
 
         protected List<CultureInfo> GetLanguageList()
         {

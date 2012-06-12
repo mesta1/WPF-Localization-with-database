@@ -7,12 +7,12 @@ using System.Windows;
 // Le informazioni generali relative a un assembly sono controllate dal seguente 
 // set di attributi. Per modificare le informazioni associate a un assembly
 // occorre quindi modificare i valori di questi attributi.
-[assembly: AssemblyTitle("ChangeLanguage")]
+[assembly: AssemblyTitle("TestLocaliz")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("coel")]
-[assembly: AssemblyProduct("ChangeLanguage")]
-[assembly: AssemblyCopyright("Copyright © coel 2011")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("TestLocaliz")]
+[assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

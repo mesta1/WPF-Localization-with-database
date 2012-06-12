@@ -1,0 +1,16 @@
+﻿<Window x:Class="TestLocaliz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:l="clr-namespace:LocalizationSupport;assembly=LocalizationSupport"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <ListBox Height="146" ItemsSource="{Binding Provider.CultureList}" HorizontalAlignment="Left" Margin="12,32,0,0" Name="listLanguages" VerticalAlignment="Top" Width="136" />
+        <Label Content="Select Language:" Height="28" HorizontalAlignment="Left" Margin="12,11,0,0" Name="lblLanguages" VerticalAlignment="Top" Width="138" />
+        <Button Content="Apply" Height="23" HorizontalAlignment="Left" Margin="41,184,0,0" Name="btnApply" VerticalAlignment="Top" Width="75" Click="btnApply_Click" />
+        <Button Content="{l:Localize Key=btnButton,DefaultValue=Button}" Height="31" HorizontalAlignment="Left" Margin="327,12,0,0" Name="btnButton" VerticalAlignment="Top" Width="124" />
+        <Label Content="{l:Localize Key=lblLabel,DefaultValue=Label}" Height="29" HorizontalAlignment="Left" Margin="327,54,0,0" Name="lblLabel" VerticalAlignment="Top" Width="123" BorderThickness="1" BorderBrush="Black" />
+        <Label Content="{Binding CurrentDate}" BorderBrush="Black" BorderThickness="1" Height="29" HorizontalAlignment="Left" Margin="327,113,0,0" VerticalAlignment="Top" Width="124" />
+        <Label Content="{l:Localize Key=lblDateTime,DefaultValue=Data:}" Height="27" HorizontalAlignment="Left" Margin="327,93,0,0" Name="lblDateTime" VerticalAlignment="Top" Width="124" />
+        <Button Content="Message Box" Height="33" HorizontalAlignment="Left" Margin="327,155,0,0" Click="btnShowMessageBox_Click" VerticalAlignment="Top" Width="123" />
+    </Grid>
+</Window>
